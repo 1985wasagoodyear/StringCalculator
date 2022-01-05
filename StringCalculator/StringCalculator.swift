@@ -1,3 +1,5 @@
+private let defaultDelimiter = Character(",")
+
 /// A simple string calculator
 /// Finds the sum of all integers in a comma-separated string.
 public struct StringCalculator {
@@ -12,11 +14,12 @@ public struct StringCalculator {
         
         var currentNumber = ""
         var sum = 0
+        let (delimiter, numbersString) = self.delimiterCheck(for: numbers)
         
-        for character in numbers {
+        for character in numbersString {
             if character.isNumber {
                 currentNumber += String(character)
-            } else {
+            } else if character == delimiter {
                 sum += self.calculateValue(for: currentNumber)
                 currentNumber = ""
             }
@@ -35,5 +38,21 @@ extension StringCalculator {
     private func calculateValue(for numberString: String) -> Int {
         let number = Int(numberString) ?? 0
         return number > 1000 ? 0 : number
+    }
+    
+    /// Checks if a custom delimiter is used, and returns that delimiter
+    /// - Parameter numberString: string representing the current number
+    /// - Returns: the delimiter for the string and the numbers (without the delimiter prefix)
+    private func delimiterCheck(for numberString: String) -> (Character, String) {
+        guard numberString.count > 2, numberString.starts(with: "//") else {
+            return (defaultDelimiter, numberString)
+        }
+        
+        let numberStringWithDelimiter = numberString.dropFirst(2)
+        guard let delimiter = numberStringWithDelimiter.first else {
+            return (defaultDelimiter, numberString)
+        }
+        
+        return (delimiter, String(numberStringWithDelimiter.dropFirst()))
     }
 }

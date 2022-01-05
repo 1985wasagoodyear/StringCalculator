@@ -62,4 +62,22 @@ final class StringCalculatorTests: XCTestCase {
         let result = self.calculator.add(inputString)
         XCTAssertEqual(result, 6)
     }
+    
+    func testAdditionWithCustomDelimiter() {
+        let inputString = "//$\n1$2$3"
+        let result = self.calculator.add(inputString)
+        XCTAssertEqual(result, 6)
+    }
+    
+    func testAdditionWithCustomDelimiterAndLargeNumber() {
+        let inputString = "//@\n2@3@8@1001"
+        let result = self.calculator.add(inputString)
+        XCTAssertEqual(result, 13)
+    }
+    
+    func testAdditionWithCustomDelimiterAndLargeNumberAndNewLine() {
+        let inputString = "//@\n1@\n2@4"
+        let result = self.calculator.add(inputString)
+        XCTAssertEqual(result, 7)
+    }
 }
