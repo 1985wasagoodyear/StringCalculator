@@ -44,4 +44,22 @@ final class StringCalculatorTests: XCTestCase {
         let result = self.calculator.add(inputString)
         XCTAssertEqual(result, 12)
     }
+    
+    func testAdditionIgnoresNewlineAfterComma() {
+        let inputString = "1\n,2,3"
+        let result = self.calculator.add(inputString)
+        XCTAssertEqual(result, 6)
+    }
+    
+    func testAdditionIgnoresNewlineBeforeComma() {
+        let inputString = "1,\n2,4"
+        let result = self.calculator.add(inputString)
+        XCTAssertEqual(result, 7)
+    }
+    
+    func testAdditionIgnoresNewlines() {
+        let inputString = "\n1\n,\n\n2\n\n,\n\n\n3\n\n\n"
+        let result = self.calculator.add(inputString)
+        XCTAssertEqual(result, 6)
+    }
 }
