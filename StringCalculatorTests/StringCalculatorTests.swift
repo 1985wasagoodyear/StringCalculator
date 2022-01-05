@@ -10,19 +10,19 @@ final class StringCalculatorTests: XCTestCase {
     }
     
     func testBasicAddition() {
-        let inputString = "1, 2, 5"
+        let inputString = "1,2,5"
         let result = self.calculator.add(inputString)
         XCTAssertEqual(result, 8)
     }
     
     func testAdditionWithTens() {
-        let inputString = "12, 34, 56"
+        let inputString = "12,34,56"
         let result = self.calculator.add(inputString)
         XCTAssertEqual(result, 102)
     }
     
     func testAdditionWithHundreds() {
-        let inputString = "123, 123, 10, 5"
+        let inputString = "123,123,10,5"
         let result = self.calculator.add(inputString)
         XCTAssertEqual(result, 261)
     }
