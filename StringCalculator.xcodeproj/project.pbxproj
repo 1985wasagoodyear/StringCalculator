@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F831F1B2785D5C2003B95D2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F831F1A2785D5C2003B95D2 /* main.swift */; };
+		3F831F282785D628003B95D2 /* StringCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F831F272785D628003B95D2 /* StringCalculatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +26,19 @@
 /* Begin PBXFileReference section */
 		3F831F172785D5C2003B95D2 /* StringCalculator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StringCalculator; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F831F1A2785D5C2003B95D2 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3F831F252785D628003B95D2 /* StringCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StringCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F831F272785D628003B95D2 /* StringCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCalculatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3F831F142785D5C2003B95D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F831F222785D628003B95D2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				3F831F192785D5C2003B95D2 /* StringCalculator */,
+				3F831F262785D628003B95D2 /* StringCalculatorTests */,
 				3F831F182785D5C2003B95D2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				3F831F172785D5C2003B95D2 /* StringCalculator */,
+				3F831F252785D628003B95D2 /* StringCalculatorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +72,14 @@
 				3F831F1A2785D5C2003B95D2 /* main.swift */,
 			);
 			path = StringCalculator;
+			sourceTree = "<group>";
+		};
+		3F831F262785D628003B95D2 /* StringCalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				3F831F272785D628003B95D2 /* StringCalculatorTests.swift */,
+			);
+			path = StringCalculatorTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +102,23 @@
 			productReference = 3F831F172785D5C2003B95D2 /* StringCalculator */;
 			productType = "com.apple.product-type.tool";
 		};
+		3F831F242785D628003B95D2 /* StringCalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F831F292785D628003B95D2 /* Build configuration list for PBXNativeTarget "StringCalculatorTests" */;
+			buildPhases = (
+				3F831F212785D628003B95D2 /* Sources */,
+				3F831F222785D628003B95D2 /* Frameworks */,
+				3F831F232785D628003B95D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StringCalculatorTests;
+			productName = StringCalculatorTests;
+			productReference = 3F831F252785D628003B95D2 /* StringCalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,6 +130,9 @@
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					3F831F162785D5C2003B95D2 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					3F831F242785D628003B95D2 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
@@ -111,9 +151,20 @@
 			projectRoot = "";
 			targets = (
 				3F831F162785D5C2003B95D2 /* StringCalculator */,
+				3F831F242785D628003B95D2 /* StringCalculatorTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F831F232785D628003B95D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3F831F132785D5C2003B95D2 /* Sources */ = {
@@ -121,6 +172,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F831F1B2785D5C2003B95D2 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F831F212785D628003B95D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F831F282785D628003B95D2 /* StringCalculatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +319,34 @@
 			};
 			name = Release;
 		};
+		3F831F2A2785D628003B95D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ky.StringCalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3F831F2B2785D628003B95D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ky.StringCalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -277,6 +364,15 @@
 			buildConfigurations = (
 				3F831F1F2785D5C2003B95D2 /* Debug */,
 				3F831F202785D5C2003B95D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F831F292785D628003B95D2 /* Build configuration list for PBXNativeTarget "StringCalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F831F2A2785D628003B95D2 /* Debug */,
+				3F831F2B2785D628003B95D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
