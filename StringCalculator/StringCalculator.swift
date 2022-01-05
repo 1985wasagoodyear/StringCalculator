@@ -17,11 +17,14 @@ public struct StringCalculator {
         let (delimiter, numbersString) = self.delimiterCheck(for: numbers)
         
         for character in numbersString {
-            if character.isNumber {
-                currentNumber += String(character)
-            } else if character == delimiter {
+            switch character {
+            case delimiter:
                 sum += self.calculateValue(for: currentNumber)
                 currentNumber = ""
+            case "\n":
+                continue
+            default:
+                currentNumber += String(character)
             }
         }
         
@@ -53,6 +56,6 @@ extension StringCalculator {
             return (defaultDelimiter, numberString)
         }
         
-        return (delimiter, String(numberStringWithDelimiter.dropFirst()))
+        return (delimiter, String(numberStringWithDelimiter.dropFirst(2)))
     }
 }
