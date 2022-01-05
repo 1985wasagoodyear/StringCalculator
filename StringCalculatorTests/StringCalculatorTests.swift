@@ -28,7 +28,7 @@ final class StringCalculatorTests: XCTestCase {
     }
     
     func testAdditionWithThousand() {
-        let inputString = "1000, 1, 2, 3"
+        let inputString = "1000,1,2,3"
         let result = self.calculator.add(inputString)
         XCTAssertEqual(result, 1006)
     }
@@ -40,7 +40,7 @@ final class StringCalculatorTests: XCTestCase {
     }
     
     func testAdditionIgnoresLargeNumbers() {
-        let inputString = "1000000000, 1000000, 10000, 2, 4, 6"
+        let inputString = "1000000000,1000000,10000,2,4,6"
         let result = self.calculator.add(inputString)
         XCTAssertEqual(result, 12)
     }
